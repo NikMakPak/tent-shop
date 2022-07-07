@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/iconsfont.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#">
+            <img class="logo__img" src="./img/logo.png" alt="logo">
+        </a>
+        <div class="flex-group">
+            <a class="cart btn" href="#">
+                <i class="icon-cart"></i>
+            </a>
+            <button class="burger btn">
+                <i class="icon-menu"></i>
+            </button>
+        </div>
+        <nav class="nav">
+            <div class="burger-bg"></div>
+            <div class="burger__sidebar">
+                <div class="search">
+                    <!-- search content -->
+                </div>
+                <ul class="nav__menu" id="menu">
+                    <li class="nav__link"><a href="../../index.html">Главная</a></li>
+                    <li class="nav__link nav__link_active"><a href="./index.html">Каталог товаров</a></li>
+                    <li class="nav__link"><a href="../../index.html#help">О нас</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="popular-product">
+            <h2>Популярный товар</h2>
+                <div class="options">
+                    <select name="" id="">
+                        <option value=""  selected>Размер</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                    </select>
+                    <select name="" id="">
+                        <option value=""  selected>Кол-во</option>
+                        <option value="">1</option>
+                        <option value="">10</option>
+                        <option value="">100</option>
+                    </select>
+            </div>
+            <div class="slider">
+                    <div class="arrow arrow--left btn">
+                        <i class="icon-arrow"></i>
+                    </div>
+                        <div class="slider__content" id="carousel">
+                            <div class="slider__item" id="item-left">
+                                
+                                <a href="#ссылка на старницу + id товара" class="card">
+                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <h3>Название товара</h3>
+                                    <div class="card__info">
+                                        <div class="price">
+                                            <strong>9999 P</strong>
+                                        </div>
+                                        <button type="button" class="add-to-cart">
+                                            <i class="icon-cart_add"></i>
+                                        </button>
+                                    </div>
+                                </a>
+    
+                                <a href="#ссылка на старницу + id товара" class="card">
+                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <h3>Название товара</h3>
+                                    <div class="card__info">
+                                        <div class="price">
+                                            <strong>9999 P</strong>
+                                        </div>
+                                        <button type="button" class="add-to-cart">
+                                            <i class="icon-cart_add"></i>
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="slider__item" id="item-active">
+                                <a href="#ссылка на старницу + id товара" class="card">
+                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <h3>Название товара</h3>
+                                    <div class="card__info">
+                                        <div class="price">
+                                            <strong>9999 P</strong>
+                                        </div>
+                                        <button type="button" class="add-to-cart">
+                                            <i class="icon-cart_add"></i>
+                                        </button>
+                                    </div>
+                                </a><a href="#ссылка на старницу + id товара" class="card">
+                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <h3>Название товара</h3>
+                                    <div class="card__info">
+                                        <div class="price">
+                                            <strong>9999 P</strong>
+                                        </div>
+                                        <button type="button" class="add-to-cart">
+                                            <i class="icon-cart_add"></i>
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="slider__item" id="item-right">
+                                <a href="#ссылка на старницу + id товара" class="card">
+                                    <img src="./img/" alt="product picture">
+                                    <h3>Название товара</h3>
+                                    <div class="card__info">
+                                        <div class="price">
+                                            <strong>9999 P</strong>
+                                        </div>
+                                        <button type="button" class="">
+                                            <i class="icon-cart_add"></i>
+                                        </button>
+                                    </div>
+                                </a>
+                                <a href="#ссылка на старницу + id товара" class="card">
+                                    <img src="./img/" alt="product picture">
+                                    <h3>Название товара</h3>
+                                    <div class="card__info">
+                                        <div class="price">
+                                            <strong>9999 P</strong>
+                                        </div>
+                                        <button type="button" class="">
+                                            <!-- корзина font awesome svg -->
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <div class="arrow arrow--right btn">
+                        <i class="icon-arrow"></i>
+                    </div>
+            </div>
+        </div>
+
+    <div class="all-product">
+        <div class="all-product__flex-group">
+            <h2>Популярный товар</h2>
+            <select name="" id="">
+                <option value="" selected>По категориям</option>
+                <option value="">Весь ассортимент</option>
+                <option value="">По убыванию цены</option>
+                <option value="">По возрастанию цены</option>
+            </select>
+        </div>
+        <div class="cards">
+            <!-- шаблон карточки  -->
+            <a href="#ссылка на старницу + id категории" class="card">
+                <img src="./img/" alt="product picture">
+                <h3>Название товара</h3>
+                <div class="card__info">
+                    <p class="card__intro">
+                        Краткое описание, для чего нужен товар
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+    </main>
+    <div class="about">
+        <a href="#">
+            <h3>Товары оптом</h3>
+        </a><a href="#">
+            <h3>О компании</h3>
+        </a><a href="#">
+            <h3>Доставка</h3>
+        </a><a href="#">
+            <h3>Оплата</h3>
+        </a>
+    </div>
+    <footer>
+        <!-- карта сайта -->
+    </footer>
+</body>
+</html>

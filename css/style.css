@@ -1,0 +1,222 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  cursor: pointer;
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+a,
+button {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  display: block;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  background-color: #fff;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  width: 69px;
+  height: 69px;
+  background-color: #083DA6;
+  box-shadow: -1px 1px 2px 1px rgba(20, 33, 104, 0.68), inset 0px 0px 7px 2px rgba(98, 147, 241, 0.9);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.btn:hover {
+  background-color: #087ea6;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 126px;
+  background: #DFF5FF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(18, 51, 116, 0.77);
+  border-radius: 0px 0px 13px 13px;
+}
+.header nav {
+  display: none;
+}
+.header .flex-group {
+  display: flex;
+  gap: 10px;
+}
+.header .logo__img {
+  height: 86.71px;
+  width: 184.11px;
+  opacity: 0.93;
+  transform: rotate(-3.56deg);
+}
+
+main {
+  margin-top: 30px;
+  padding: 0 15px 0 15px;
+}
+
+.popular-product {
+  position: relative;
+  height: 300px;
+  background: #FDFDFD;
+  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+.popular-product h2 {
+  text-align: start;
+  padding-bottom: 9px;
+}
+.popular-product .options {
+  width: 90%;
+  display: flex;
+  gap: 24px;
+  margin: 0 auto 20px auto;
+}
+.popular-product .options select {
+  width: 157px;
+  height: 30px;
+  color: #fff;
+  padding-left: 12px;
+  font-size: 18px;
+  background-color: #073EA5;
+  border-radius: 20px;
+}
+
+.card {
+  background: rgba(155, 226, 205, 0.16);
+  border-radius: 20px;
+}
+.card h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+}
+.slider .slider__content {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.slider .slider__item {
+  display: flex;
+  gap: 10px;
+}
+.slider .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 165px;
+  padding: 9px;
+}
+.slider .card .card__info {
+  display: flex;
+  gap: 7px;
+}
+.slider .card .card__info .price {
+  padding: 3px 10px;
+  background: #FDFDFD;
+  border-radius: 20px;
+  font-style: italic;
+}
+.slider .card .card__info .add-to-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 14px;
+  background: #28D62F;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .card .card__info .add-to-cart i {
+  margin-right: 2px;
+}
+.slider .card .card__info .add-to-cart:hover {
+  box-shadow: 0px 0px 28px 1px rgba(36, 255, 0, 0.2), inset 0px 0px 18px rgba(3, 83, 11, 0.73);
+}
+
+#carousel {
+  transform: translateX(-348px);
+}
+
+.arrow {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 10.1875em;
+  width: 31px;
+  height: 70px;
+  background: #083DA6;
+  box-shadow: -1px 1px 2px 1px rgba(20, 33, 104, 0.68), inset 0px 0px 7px 2px rgba(98, 147, 241, 0.9);
+}
+
+.arrow--left {
+  left: 0;
+  border-radius: 0px 20px 20px 0px;
+}
+.arrow--left .icon-arrow {
+  transform: rotate(-180deg);
+}
+
+.arrow--right {
+  right: 0;
+  border-radius: 20px 0px 0px 20px;
+}/*# sourceMappingURL=style.css.map */
