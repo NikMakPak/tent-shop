@@ -40,8 +40,8 @@
     </header>
 
     <main>
-        <div class="popular-product">
-            <h2>Популярный товар</h2>
+        <div class="popular-product content-block gap">
+            <h2 class="block-title">Популярный товар</h2>
                 <div class="options">
                     <select name="" id="">
                         <option value=""  selected>Размер</option>
@@ -70,20 +70,22 @@
                                         <div class="price">
                                             <strong>9999 P</strong>
                                         </div>
-                                        <button type="button" class="add-to-cart">
+                                        <button type="button" class="add-to-cart card-btn">
                                             <i class="icon-cart_add"></i>
                                         </button>
                                     </div>
                                 </a>
     
                                 <a href="#ссылка на старницу + id товара" class="card">
-                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <div class="card-img">
+                                        <img src="./img/anonum_img.png" alt="product picture">
+                                    </div>
                                     <h3>Название товара</h3>
                                     <div class="card__info">
                                         <div class="price">
                                             <strong>9999 P</strong>
                                         </div>
-                                        <button type="button" class="add-to-cart">
+                                        <button type="button" class="add-to-cart card-btn">
                                             <i class="icon-cart_add"></i>
                                         </button>
                                     </div>
@@ -92,24 +94,28 @@
                             
                             <div class="slider__item" id="item-active">
                                 <a href="#ссылка на старницу + id товара" class="card">
-                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <div class="card-img">
+                                        <img src="./img/anonum_img.png" alt="product picture">
+                                    </div>
                                     <h3>Название товара</h3>
                                     <div class="card__info">
                                         <div class="price">
                                             <strong>9999 P</strong>
                                         </div>
-                                        <button type="button" class="add-to-cart">
+                                        <button type="button" class="add-to-cart card-btn">
                                             <i class="icon-cart_add"></i>
                                         </button>
                                     </div>
                                 </a><a href="#ссылка на старницу + id товара" class="card">
-                                    <img src="./img/anonum_img.png" alt="product picture">
+                                    <div class="card-img">
+                                        <img src="./img/anonum_img.png" alt="product picture">
+                                    </div>
                                     <h3>Название товара</h3>
                                     <div class="card__info">
                                         <div class="price">
                                             <strong>9999 P</strong>
                                         </div>
-                                        <button type="button" class="add-to-cart">
+                                        <button type="button" class="add-to-cart card-btn">
                                             <i class="icon-cart_add"></i>
                                         </button>
                                     </div>
@@ -149,9 +155,9 @@
             </div>
         </div>
 
-    <div class="all-product">
-        <div class="all-product__flex-group">
-            <h2>Популярный товар</h2>
+    <div class="all-product content-block gap">
+        <div class="all-product__header">
+            <h2 class="block-title">Товар</h2>
             <select name="" id="">
                 <option value="" selected>По категориям</option>
                 <option value="">Весь ассортимент</option>
@@ -162,10 +168,12 @@
         <div class="cards">
             <!-- шаблон карточки  -->
             <a href="#ссылка на старницу + id категории" class="card">
-                <img src="./img/" alt="product picture">
+                <div class="card-img">
+                    <img src="./img/anonum_img.png" alt="product picture">
+                </div>
                 <h3>Название товара</h3>
                 <div class="card__info">
-                    <p class="card__intro">
+                    <p class="card__intro card-btn">
                         Краткое описание, для чего нужен товар
                     </p>
                 </div>
@@ -173,16 +181,20 @@
         </div>
     </div>
     </main>
-    <div class="about">
-        <a href="#">
-            <h3>Товары оптом</h3>
-        </a><a href="#">
-            <h3>О компании</h3>
-        </a><a href="#">
-            <h3>Доставка</h3>
-        </a><a href="#">
-            <h3>Оплата</h3>
-        </a>
+    <div class="about content-block gap">
+        <h2 class="block-title">О нас</h2>
+        <div class="links">
+            <a href="#">
+                <h3>Товары оптом</h3>
+            </a><a href="#">
+                <h3>О компании</h3>
+            </a><a href="#">
+                <h3>Доставка</h3>
+            </a><a href="#">
+                <h3>Оплата</h3>
+            </a>
+        </div>
+        
     </div>
     <footer>
         <!-- карта сайта -->
