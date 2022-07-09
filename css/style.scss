@@ -63,17 +63,22 @@ button {
     align-items: center;
 }
 
-@mixin indent {
-    padding: 0 15px 0 15px;
+@mixin indent($a) {
+    @if $a==1 {
+        margin: 0 15px 0 15px;
+    }
+    @else{
+        padding: 0 15px 0 15px;
+    }
 }
 
 @function toEm($px) {
-    @return $px/16*1em;
+    @return calc($px / 16)*1em;
 }
 
 // mixins
 
-$anim-time: 0.5s;
+$anim-time: 0.3s;
 // переменные
 
 body {
@@ -93,10 +98,10 @@ body {
     box-shadow: -1px 1px 2px 1px rgba(20, 33, 104, 0.68), inset 0px 0px 7px 2px rgba(98, 147, 241, 0.9);
     border-radius: 20px;
     @include flex-center();
-    transition: 0.5s;
+    transition: $anim-time;
 
     &:hover {
-        background-color: #087ea6;
+        opacity: 0.8;
     }
 }
 
@@ -126,23 +131,22 @@ body {
 }
 
 main {
-    margin-top: 30px;
-    @include indent();
+    @include indent(0);
+}
+.gap{
+    margin-top: 30px !important; 
 }
 
 
-
-.popular-product {
-    position: relative;
-    height: 300px;
+.content-block{
+    padding: 12px 0;
     background: #FDFDFD;
     box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-
-    h2 {
-        text-align: start;
-        padding-bottom: 9px;
-    }
+}
+.popular-product {
+    position: relative;
+    
 
     .options {
         width: 90%;
@@ -150,26 +154,22 @@ main {
         gap: 24px;
         margin: 0 auto 20px auto;
 
-        select {
-            width: 157px;
-            height: 30px;
-            color: #fff;
-            padding-left: 12px;
-            font-size: 18px;
-            background-color: #073EA5;
-            border-radius: 20px;
-        }
+        
     }
 }
-
-.card {
-    background: rgba(155, 226, 205, 0.16);
+.block-title {
+    text-align: start;
+    padding-bottom: 9px;
+    margin-left: 7px;
+}
+select {
+    padding: 0 20px;
+    height: 30px;
+    color: #fff;
+    padding-left: 12px;
+    font-size: 18px;
+    background-color: #073EA5;
     border-radius: 20px;
-
-    h3 {
-        font-size: 16px;
-        font-weight: 400;
-    }
 }
 
 .slider {
@@ -179,50 +179,64 @@ main {
     .slider__content {
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
     }
 
     .slider__item {
         display: flex;
         gap: 10px;
+        .card-img{
+            height: 120px;
+            width: 90%;
+        }
     }
 
-    .card {
+}
+.card {
+    @include flex-center();
+    flex-direction: column;
+    min-width: 165px;
+    padding: 9px;
+    background: rgba(155, 226, 205, 0.16);
+    transition: $anim-time+.2s;
+    border-radius: 20px;
+    &:hover{
+        box-shadow: 0px 0px 10px 1px rgb(36 255 0 / 20%), inset 0px 0px 15px rgb(3 83 11 / 20%);
+        .card-btn{
+            box-shadow: 0px 0px 28px 1px rgba(36, 255, 0, 0.2), inset 0px 0px 18px rgba(3, 83, 11, 0.73);
+        }
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .card__info {
+        display: flex;
+        gap: 7px;
+
+        .price {
+            padding: 3px 10px;
+            background: #FDFDFD;
+            border-radius: 20px;
+            font-style: italic;
+        }
+    }
+    .card-btn{
         @include flex-center();
-        flex-direction: column;
-        min-width: 165px;
-        padding: 9px;
-
-        .card__info {
-            display: flex;
-            gap: 7px;
-
-            .price {
-                padding: 3px 10px;
-                background: #FDFDFD;
-                border-radius: 20px;
-                font-style: italic;
-            }
-
-            .add-to-cart {
-                @include flex-center();
-                padding: 3px 14px;
-                background: #28D62F;
-                border-radius: 20px;
-                transition: $anim-time;
-                i{
-                    margin-right: 2px;
-                }
-                &:hover{
-                    box-shadow: 0px 0px 28px 1px rgba(36, 255, 0, 0.2), inset 0px 0px 18px rgba(3, 83, 11, 0.73);
-                }
-            }
+        background: #28D62F;
+        border-radius: 20px;
+        transition: $anim-time;
+    }
+    .add-to-cart {
+        padding: 3px 14px;
+        i{
+            margin-right: 2px;
         }
     }
 }
 
 #carousel{
-    transform: translateX(-348px);
+    transform: translateX(-353px);
 }
 
 .arrow {
@@ -249,3 +263,63 @@ main {
     right: 0;
     border-radius: 20px 0px 0px 20px;
 }
+
+
+.all-product{
+    .all-product__header{
+        display: flex;
+        gap: 51px;
+        select{
+            width: 198px;
+        }
+    }
+    .card__intro{
+        background-color: #14EE2A;
+        font-size: 12px;
+        font-style: italic;
+        padding: 5px 10px;
+    }
+}
+.cards{
+    padding: 0 23px;
+}
+
+.card-img{
+     height: 110px;
+     width: 100%;
+     overflow: hidden;
+     border-radius: 20px;
+     img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+     }
+}
+
+.about{
+    @include indent(1);
+}
+.links{
+    margin: 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    & > a{
+        @include flex-center();
+        background: rgba(155, 226, 205, 0.16);
+        transition: $anim-time+.2s;
+        border-radius: 20px;
+        padding: 39px 49px;
+        &:hover{
+            box-shadow: 0px 0px 10px 1px rgb(36 255 0 / 20%), inset 0px 0px 15px rgb(3 83 11 / 20%);
+        }
+        &:visited{
+            h3{
+                opacity: 0.8;
+            }
+        }
+    }
+    
+}
+
+// TODO: разобраться с link сдлать норм visited
