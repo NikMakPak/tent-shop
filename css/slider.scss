@@ -1,0 +1,65 @@
+/* адаптивная анимация из css*/
+$anim-time: 0.3s;
+:root{
+    --trans-anim:100%;
+    --trans-anim-r:-100%;
+  }
+  
+  @media (max-width: 1279px) {
+    :root{
+      --trans-anim:355px;
+      --trans-anim-r:-355px;
+    }
+  }
+  
+  @-webkit-keyframes move-right {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(var(--trans-anim-r));
+              transform: translateX(var(--trans-anim-r));
+    }
+  }
+  
+  @keyframes move-right {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(var(--trans-anim-r));
+              transform: translateX(var(--trans-anim-r));
+    }
+  }
+  
+  @-webkit-keyframes move-left {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(var(--trans-anim));
+              transform: translateX(var(--trans-anim));
+    }
+  }
+  
+  @keyframes move-left {
+    from {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    to {
+      -webkit-transform: translateX(var(--trans-anim));
+              transform: translateX(var(--trans-anim));
+    }
+  }
+
+.transition-right {
+    animation: $anim-time+1 move-right;
+}
+
+.transition-left {
+    animation: $anim-time+1 move-left;
+}

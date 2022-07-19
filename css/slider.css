@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* адаптивная анимация из css*/
+:root {
+  --trans-anim:100%;
+  --trans-anim-r:-100%;
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --trans-anim:355px;
+    --trans-anim-r:-355px;
+  }
+}
+@-webkit-keyframes move-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--trans-anim-r));
+  }
+}
+@keyframes move-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--trans-anim-r));
+  }
+}
+@-webkit-keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--trans-anim));
+  }
+}
+@keyframes move-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--trans-anim));
+  }
+}
+.transition-right {
+  -webkit-animation: 1.3s move-right;
+          animation: 1.3s move-right;
+}
+
+.transition-left {
+  -webkit-animation: 1.3s move-left;
+          animation: 1.3s move-left;
+}/*# sourceMappingURL=slider.css.map */
