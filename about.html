@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/iconsfont.css" />
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="icon"
+      href="http://kupi-tent.ru/wp-content/uploads/2021/08/35578_tent-ukryvnoy-4kh5m-100x100.jpg"
+      sizes="32x32"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="http://kupi-tent.ru/wp-content/uploads/2021/08/35578_tent-ukryvnoy-4kh5m-300x300.jpg"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Kupi-tent | О компании</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="#">
+        <img class="logo__img" src="./img/logo.png" alt="logo" />
+      </a>
+      <div class="flex-group">
+        <a class="cart btn" href="#">
+          <i class="icon-cart"></i>
+        </a>
+        <button class="burger btn">
+          <i class="icon-menu"></i>
+        </button>
+      </div>
+      <nav class="nav">
+        <div class="burger__sidebar">
+          <div class="flex-group">
+            <div class="search">
+              <form>
+                <input type="text" placeholder="Найдется все..." />
+                <button type="submit"><i class="icon-search"></i></button>
+              </form>
+            </div>
+            <button class="close-btn"><i class="icon-close"></i></button>
+          </div>
+          <ul class="nav__menu" id="menu">
+            <li class="nav__link"><a href="./index.html">Главная</a></li>
+
+            <details class="accordion nav__link">
+              <summary class="accordion__control">
+                <h3 class="accordion__title">Каталог товаров</h3>
+              </summary>
+              <div class="accordion__content">
+                <ul class="products">
+                  <li>
+                    <a href="#" class="product__item">Тарпаулин</a>
+                  </li>
+                  <li>
+                    <a href="#" class="product__item">Брезент</a>
+                  </li>
+                  <li>
+                    <a href="#" class="product__item">ТЕНТ ПВХ</a>
+                  </li>
+                  <li>
+                    <a href="#" class="product__item">ОКСФОРД</a>
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <li class="nav__link"><a href="./about.html">О компании</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content-block gap">
+        <h2 class="block-title">О компании</h2>
+      </div>
+    </main>
+    
+    <footer class="site-map gap">
+      <div class="site-map__link">
+        <a class="site-map__item" href="./index.html"
+          ><h3 class="site-map__title">Главная</h3></a
+        >
+      </div>
+      <div class="site-map__link">
+        <a class="site-map__item" href="./about.html"
+          ><h3 class="site-map__title">О компании</h3></a
+        >
+      </div>
+      <details class="accordion">
+        <summary class="accordion__control">
+          <h3 class="accordion__title">Каталог товаров</h3>
+        </summary>
+        <div class="accordion__content">
+          <ul class="products">
+            <li>
+              <a href="#" class="product__item">Тарпаулин</a>
+            </li>
+            <li>
+              <a href="#" class="product__item">Брезент</a>
+            </li>
+            <li>
+              <a href="#" class="product__item">ТЕНТ ПВХ</a>
+            </li>
+            <li>
+              <a href="#" class="product__item">ОКСФОРД</a>
+            </li>
+          </ul>
+        </div>
+      </details>
+      <div class="site-map__link">
+        <a class="site-map__item" href="./news.html"
+          ><h3 class="site-map__title">Новости</h3></a
+        >
+      </div>
+    </footer>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

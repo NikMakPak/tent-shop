@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconsfont';
-  src:  url('../fonts/iconsfont.eot?4fr3oc');
-  src:  url('../fonts/iconsfont.eot?4fr3oc#iefix') format('embedded-opentype'),
-    url('../fonts/iconsfont.ttf?4fr3oc') format('truetype'),
-    url('../fonts/iconsfont.woff?4fr3oc') format('woff'),
-    url('../fonts/iconsfont.svg?4fr3oc#iconsfont') format('svg');
+  src:  url('../fonts/iconsfont.eot?4fyqa4');
+  src:  url('../fonts/iconsfont.eot?4fyqa4#iefix') format('embedded-opentype'),
+    url('../fonts/iconsfont.ttf?4fyqa4') format('truetype'),
+    url('../fonts/iconsfont.woff?4fyqa4') format('woff'),
+    url('../fonts/iconsfont.svg?4fyqa4#iconsfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow_back:before {
+  content: "\e905";
+  color: #fff;
+}
+.icon-search:before {
+  content: "\e904";
+  color: #000;
+  font-size: 50px;
+}
+
+.icon-close:before {
+  content: "\e906";
+  color: #000;
+  font-size: 50px;
+}
 .icon-arrow:before {
   content: "\e903";
   color: #fff;
